@@ -1,5 +1,3 @@
-# UE4_23-porfolioWeb
-
 # 🎉 Final Guide: Fullscreen Canvas in Unreal Engine 4.23 HTML5 Export (Without Fullscreen Mode)
 
 This guide explains how to make Unreal Engine 4.23 HTML5 builds **use the entire browser window** dynamically, **without forcing fullscreen mode**, and **remove all unnecessary UI clutter**.
@@ -8,7 +6,7 @@ This guide explains how to make Unreal Engine 4.23 HTML5 builds **use the entire
 
 ## ✨ Step-by-Step Instructions
 
-### 1. ✅ Edit `BaseTP.html`
+### 1. ✅ Edit `<ProjectName>.html`
 
 Replace the canvas section to contain **only** the canvas element:
 
@@ -20,7 +18,7 @@ Replace the canvas section to contain **only** the canvas element:
 
 ---
 
-### 2. ✅ Update `BaseTP.css`
+### 2. ✅ Update `<ProjectName>.css`
 
 Add the following styles:
 
@@ -51,7 +49,7 @@ canvas#canvas {
 
 ---
 
-### 3. ✅ Add a Custom Canvas Resizer in `BaseTP.UE4.js`
+### 3. ✅ Add a Custom Canvas Resizer in `<ProjectName>.UE4.js`
 
 Right after this line:
 
@@ -89,7 +87,7 @@ window.addEventListener('resize', () => {
 
 ### 4. ✅ Fix Unreal's `resizeCanvas()` Function
 
-Find this function in `BaseTP.UE4.js`:
+Find this function in `<ProjectName>.UE4.js`:
 
 ```js
 function resizeCanvas(aboutToEnterFullscreen) { ... }
